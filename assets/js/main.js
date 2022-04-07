@@ -38,6 +38,9 @@
     $(window).trigger("scroll");
     $(window).trigger("resize");
     preloaderSetup();
+    // video-slider
+
+   
   });
 
   $(document).on("ready", function () {
@@ -56,6 +59,16 @@
     rippleInit();
     new WOW().init();
 
+
+    if ($(".slick-slide.slick-current.slick-active")){
+      console.log("ASdfjnk")
+      // Do something if class exists
+    } else {
+      // document.getElementsByTagName("video");
+      $(".video-slider").get(0).pause()
+        // Do something if class does not exist
+    }
+    
   });
 
   $(window).on("scroll", function () {

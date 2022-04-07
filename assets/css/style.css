@@ -133,6 +133,14 @@ a:hover {
   color: inherit;
 }
 
+.hidden {
+  display:none;
+}
+
+video {
+  max-width: 100%;
+  object-fit: fill;
+}
 @media screen and (max-width: 991px) {
   body, html {
     font-size: 14px;
