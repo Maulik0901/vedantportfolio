@@ -133,14 +133,22 @@ a:hover {
   color: inherit;
 }
 
+/* custome css start */
 .hidden {
   display:none;
+}
+
+.video-slider {
+  max-width: 100%;
+  object-fit: fill;
 }
 
 video {
   max-width: 100%;
   object-fit: fill;
 }
+
+/* custome css end */
 @media screen and (max-width: 991px) {
   body, html {
     font-size: 14px;
