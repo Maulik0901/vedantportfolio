@@ -33,7 +33,7 @@
             <a class="st-site-branding" href="#">
               <!-- <img src="assets/img/logo.png" alt="Davis"> -->
               
-              <h3>Vison Limelite</h3>
+              <h3>Vision Limelite</h3>
             </a>
           </div>
           <div class="st-main-header-right">
@@ -818,29 +818,29 @@
         <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
           data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"
           data-lg-slides="1" data-add-slides="1">
-          <div class="slick-wrapper">
-
-            <div class="slick-slide-in">
+          <div class="slick-wrapper" id="video-data">
+            <!-- <div  ></div> -->
+            <!-- <div class="slick-slide-in">
               <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
                 <video  controls autoplay class="video-slider">
                   <source src="https://res.cloudinary.com/dml82moap/video/upload/v1648320202/PRE-PRODUCTION%20%20POST-PRODUCTION/COMING_SOON_o5ypud.mp4" type="video/mp4">
-                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  
                   Your browser does not support the video tag.
                 </video>
                 
               </div>
-            </div>
+            </div> -->
 
-            <div class="slick-slide-in">
+            <!-- <div class="slick-slide-in">
               <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
                 <video  controls autoplay class="video-slider">
                   <source src="https://res.cloudinary.com/dml82moap/video/upload/v1648320198/PRE-PRODUCTION%20%20POST-PRODUCTION/CORONA_2nd_WAVE_ameflw.mp4" type="video/mp4">
-                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  
                   Your browser does not support the video tag.
                 </video>
                 
               </div>
-            </div>
+            </div> -->
            
           </div>
         </div>
@@ -1216,7 +1216,7 @@
   <footer>
     <div class="container">
       <div class="st-copyright-wrap text-center">
-        <div class="st-copyright-text">© 2021. Designed by Laralink. All right reserved.</div>
+        <div class="st-copyright-text">© 2022. Designed by Vision Limelite. All right reserved.</div>
       </div>
     </div>
   </footer>
@@ -1304,6 +1304,39 @@
         );
       }
      
+      var videoData = [
+        {
+          url: "https://res.cloudinary.com/dml82moap/video/upload/v1649684726/VL_PRESENT_FHD_dzxouh.mp4"
+        },
+        {
+          url: "https://res.cloudinary.com/dml82moap/video/upload/v1649353103/PRE-PRODUCTION%20%20POST-PRODUCTION/LAKSH_CHANDI_MAHAYAGNA_HIGHLIGHTS_2_Year_Complete_ax7i0q.mp4"
+        },
+        {
+          url:"https://res.cloudinary.com/dml82moap/video/upload/v1648320202/PRE-PRODUCTION%20%20POST-PRODUCTION/COMING_SOON_o5ypud.mp4"
+        },
+        {
+          url: "https://res.cloudinary.com/dml82moap/video/upload/v1648320198/PRE-PRODUCTION%20%20POST-PRODUCTION/CORONA_2nd_WAVE_ameflw.mp4"
+        }
+      ];
+      
+      const Video_Results = item => `
+        <div class="slick-slide-in">
+          <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            <video  controls  controlsList="nodownload" class="video-slider">
+              <source src=${item.url}>
+              
+              Your browser does not support the video tag.
+            </video>
+            
+          </div>
+        </div>
+      `;
+      for(var i=0;i<videoData.length;i++){
+        $('#video-data').append(
+          Video_Results(videoData[i])
+        );
+      }
+      
   });
   </script>
 </body>
